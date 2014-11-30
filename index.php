@@ -1,17 +1,26 @@
-<html>
-<head>
-    <title>PHP Foundation</title>
-</head>
-<body>
 
-   <?php require_once("menu.php"); ?>
-    <div>
-        <h1>
-            HOME
-        </h1>
+<?php include_once("header.php"); ?>
 
-        <?php require_once($_GET("arquivo")); ?>
-    </div>
+<?php include_once("menu.php"); ?>
 
-</body>
-</html>
+
+<?php
+
+    if(!isset($_GET['page']))
+
+        require_once("home.php");
+
+    else
+
+        try{
+
+            require_once($_GET['page'].".php");
+        }catch(Exception $e){
+            require_once("error.php");
+        }
+
+
+?>
+
+
+<?php include_once("footer.php"); ?>
