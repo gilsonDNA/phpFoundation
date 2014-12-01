@@ -1,17 +1,21 @@
 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
 
-<div class="span10">
 
+
+
+
+<div class="span10">
+    <form action="contato.php" method="post" >
     <div class="well">
 
+        <?php if(!isset( $_POST['submit']) ): ?>
 
-        <?php if(!isset($_POST['submit'])): ?>
 
-        <form action="contato.php" method="post" >
+
         <h3>Informe os dados abaixo:</h3>
 
 
-        <input class="btn btn-primary btn-small" type="submit" name="submit" value="Enviar">
+        <input class="btn btn-primary btn-small" type="submit" name="submit" value="Enviar"/>
 
         <table>
             <tr>
@@ -31,7 +35,7 @@
 
 
         <hr />
-        </form>
+
 
         <?php else: ?>
 
@@ -48,7 +52,7 @@
 
     </div>
 
-
+    </form>
 
 
 

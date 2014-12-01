@@ -14,7 +14,7 @@
 
         try{
 
-            require_once($_GET['page'].".php");
+            require_once(  $_GET['page'].".php" );
         }catch(Exception $e){
             require_once("error.php");
         }
