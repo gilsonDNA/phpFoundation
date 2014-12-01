@@ -4,7 +4,7 @@
 
     <div class="well">
 
-        <?php if(!$_POST['submit']): ?>
+        <?php if(!isset($_POST['submit'])): ?>
 
         <form action="contato.php" method="post" >
         <h3>Informe os dados abaixo:</h3>
