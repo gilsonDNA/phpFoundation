@@ -38,7 +38,7 @@
                 <div class="form-group">
                     <label for="message" class="col-sm-2 control-label">Mensagem:</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control"  name="mensagem" />
+                        <textarea class="form-control"  name="mensagem" ></textarea>
                     </div>
                 </div>
 
