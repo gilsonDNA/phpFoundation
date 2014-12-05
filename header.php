@@ -1,11 +1,9 @@
 <?php
 require_once("utilidades.php");
 if(retornaURLDigitada() == "error404") {
-    header('Location: error.php');
-    //die;
-    //http_response_code(404);
-    //header("HTTP/1.0 404 Not Found");
-
+    header("HTTP/1.0 404 Not Found");
+    include("error.php");
+    die;
 }
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
