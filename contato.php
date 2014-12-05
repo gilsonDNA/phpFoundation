@@ -5,7 +5,7 @@
 
 
 <div class="span10">
-    <form class="form-horizontal" action="contato.php" role="form" method="post" >
+    <form class="form-horizontal" action="contato" role="form" method="post" >
     <div class="well">
 
         <?php if(!isset( $_POST['submit']) ): ?>
@@ -48,17 +48,17 @@
 
         <?php else: ?>
 
-            <h1>Dados Enviado com sucesso, abaixo seguem os dados que voce enviou</h1>
+            <h4>Dados Enviado com sucesso, abaixo seguem os dados que voce enviou</h4>
 
 
-            <b>Nome: <?php echo $_POST['nome']; ?></b> <br />
-            <b>Email: <?php echo $_POST['email']; ?></b> <br />
-            <b>Assunto: <?php echo $_POST['assunto']; ?></b> <br />
-            <b>Mensagem: <?php echo $_POST['mensagem']; ?></b> <br />
+            <b>Nome:</b> <?php echo $_POST['nome']; ?> <br />
+            <b>Email:</b> <?php echo $_POST['email']; ?> <br />
+            <b>Assunto:</b> <?php echo $_POST['assunto']; ?> <br />
+            <b>Mensagem: </b><?php echo $_POST['mensagem']; ?> <br />
 
 
 
-            <a href="index.php">Voltar</a>
+            <a href="index">Voltar</a>
 
 
         <?php endif; ?>
