@@ -20,25 +20,25 @@
                 <div class="form-group">
                     <label for="nome" class="col-sm-2 control-label">Nome:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"/>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required="true"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Email:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="true"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="assunto" class="col-sm-2 control-label">Assunto:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Assunto"/>
+                        <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Assunto" required="true"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message" class="col-sm-2 control-label">Mensagem:</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control"  name="mensagem" ></textarea>
+                        <textarea class="form-control"  name="mensagem" required="true"></textarea>
                     </div>
                 </div>
 
