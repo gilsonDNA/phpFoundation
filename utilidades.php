@@ -1,7 +1,7 @@
 <?php
 function minhaRotas(){
 
-    $arrayRotas =  array("index.php","contato.php", "empresa.php", "produto.php", "servico.php");
+    $arrayRotas =  array("index.php","contato.php", "empresa.php", "produto.php", "servico.php", "pesquisa.php");
 
     return $arrayRotas;
 }

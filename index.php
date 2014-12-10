@@ -6,6 +6,8 @@
     //echo "index";
     //die;
     $paginaDigitada = retornaURLDigitada();
+    //var_dump($paginaDigitada);
+    //die;
     if($paginaDigitada != "error404") {
         require_once($paginaDigitada);
     }

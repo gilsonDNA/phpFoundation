@@ -20,6 +20,15 @@ SQL para criação do banco
 CREATE SCHEMA `phpbanco` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
 
+Executar Fixture
+----------------
+
+Para executar a Fixture execute o seguinte comando
+
+php db/fixture.php
+
+
+
 
 
 
