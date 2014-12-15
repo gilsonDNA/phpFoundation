@@ -1,13 +1,14 @@
 <?php
 
-
+include __DIR__."/../utilidades.php";
 require_once "conexaoDB.php";
+
 
 echo "### Executando Fixture ###\n";
 
 $conn = conexaoDB();
 
-echo "Removendo tabela\n";
+echo "Removendo tabela conteudo\n";
 $conn->query("DROP TABLE IF EXISTS tblconteudo;");
 echo " ok\n";
 
@@ -44,6 +45,38 @@ foreach($arrayPagConteudo as $pagConteudo ){
 }
 
 echo "ok\n";
+
+echo "Removendo tabela Usuario\n";
+$conn->query("DROP TABLE IF EXISTS tblusuario;");
+echo " ok\n";
+
+echo "Criando tabela tblusuario";
+$conn->query("CREATE TABLE tblusuario (
+            id INT NOT NULL AUTO_INCREMENT,
+            nome VARCHAR(255) CHARACTER SET 'utf8' NULL,
+            sobrenome VARCHAR(255) CHARACTER SET 'utf8' NULL,
+            email VARCHAR(255) CHARACTER SET 'utf8' NULL,
+            password VARCHAR(255) CHARACTER SET 'utf8' NULL,
+            PRIMARY KEY (id))");
+
+echo " ok\n";
+
+echo "inserindo usuário\n";
+
+$nome = "Gilson";
+$sobrenome = "Anselmo de Araujo";
+$email = "gilson@idnadevendas.com.br";
+$password = "123456";
+
+$smtp = $conn->prepare("INSERT INTO tblusuario (nome, sobrenome, email, password) VALUES (:nome, :sobrenome, :email, :password);");
+$smtp->bindParam(":nome", $nome);
+$smtp->bindParam(":sobrenome", $sobrenome);
+$smtp->bindParam(":email", $email);
+$smtp->bindParam(":password", criptografa($password) );
+$smtp->execute();
+
+
+
 
 echo "### Concluido ###\n";
 

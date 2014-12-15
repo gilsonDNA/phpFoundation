@@ -1,4 +1,56 @@
 <?php
+
+
+function criptografa($senha){
+
+    $options =[
+        $salt = "school of net - curso de php, recomendo"
+    ];
+
+    return password_hash($senha, PASSWORD_DEFAULT, $options );
+}
+
+
+
+function estaLogado($arrUsuario, $password){
+
+    $logou = false;
+
+    if( isset($_SESSION['usuario'] ) ){
+
+        $usuarioSessao = $_SESSION["usuario"];
+
+        if($usuarioSessao['password'] == $password){
+            $logou = true;
+        }else{
+            return false;
+        }
+
+
+    }
+
+    return $logou;
+}
+
+function criaSessao($arrUsuario){
+
+    session_start();
+    $_SESSION["usuario"] = $arrUsuario;
+
+}
+
+function destroiSessao($arrUsuario){
+
+    if(isset($_SESSION["usuario"])){
+        unset($_SESSION["usuario"]);
+    }
+
+}
+
+
+
+
+
 function minhaRotas(){
 
     $arrayRotas =  array("index.php","contato.php", "empresa.php", "produto.php", "servico.php", "pesquisa.php");
