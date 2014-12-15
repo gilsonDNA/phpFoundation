@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>School Of Net - PHP-Foundation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-</head>
-<body>
-   <h1>404 Página não encontrada</h1>
+<?php include_once("header_padrao.php"); ?>
+<?php include_once("menu.php"); ?>
 
-</body>
+<!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
+<div class="span10">
 
-</html>
+
+
+
+    <div class="well">
+        <h1>404 Página não encontrada</h1>
+        <hr />
+
+        <h3>Não foi possível localizar a página solicitada.</h3>
+
+        <hr />
+
+    </div>
+</div>
+
+<?php include_once("footer.php"); ?>
