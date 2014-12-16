@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("utilidades.php");
 if(retornaURLDigitada() == "error404") {
     header("HTTP/1.0 404 Not Found");

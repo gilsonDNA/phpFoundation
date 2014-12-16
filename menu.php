@@ -10,6 +10,10 @@
         <li> <a href="produto"> <i class="icon-star"></i> Produto </a> </li>
         <li> <a href="servico"> <i class="icon-star"></i> Serviços </a> </li>
         <li> <a href="contato"> <i class="icon-star"></i> Contato </a> </li>
+
+        <?php  if( estaLogado() ): ?>
+           <li> <a href="logoff"> <i class="icon-star"></i>Sair do sistema </a> </li>
+        <?php  endif;  ?>
     </ul>
 
 

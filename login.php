@@ -1,16 +1,12 @@
 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
 
-
-
-
-
 <div class="span10">
     <form class="form-horizontal" action="contato" role="form" method="post" >
     <div class="well">
 
         <?php if(!isset( $_POST['submit']) ): ?>
 
-        <h6>Você precisa fazer se autenticar no sistema:</h6>
+        <h3>Você precisa fazer se autenticar no sistema:</3>
 
 
 
@@ -35,9 +31,30 @@
         <?php else: ?>
            <?php
 
+            include("usuario/usuarioDAO.php");
+            require_once("utilidades.php");
             $arrUsuario =  array();
             $arrUsuario['email'] = $_POST['email'];
             $arrUsuario['password'] = $_POST['password'];
+
+
+            try{
+                $usuario = getUsuarioByEmail($arrUsuario['email']);
+
+
+                if( password_verify($arrUsuario['password'], $usuario['password']) ){
+                    criaSessao($usuario);
+                }else{
+                    echo "Login ou senha inválidos!";
+                    die;
+                }
+            }catch (Exception $e){
+                echo $e->getMessage();
+            }
+
+
+
+
 
 
 

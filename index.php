@@ -9,7 +9,14 @@
     //var_dump($paginaDigitada);
     //die;
     if($paginaDigitada != "error404") {
-        require_once($paginaDigitada);
+
+
+        if(estaLogado()){
+            require_once($paginaDigitada);
+        }else{
+            require_once("login.php");
+        }
+
     }
 
 ?>

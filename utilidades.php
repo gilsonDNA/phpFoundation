@@ -1,45 +1,42 @@
 <?php
 
 
-function criptografa($senha){
+function criptografaSalt($senha){
 
     $options =[
-        $salt = "school of net - curso de php, recomendo"
+        $salt = "school of net frase"
     ];
 
     return password_hash($senha, PASSWORD_DEFAULT, $options );
 }
 
+function criptografa($senha){
 
+    return password_hash($senha, PASSWORD_DEFAULT);
+}
 
-function estaLogado($arrUsuario, $password){
+function estaLogado(){
 
     $logou = false;
 
     if( isset($_SESSION['usuario'] ) ){
-
-        $usuarioSessao = $_SESSION["usuario"];
-
-        if($usuarioSessao['password'] == $password){
-            $logou = true;
-        }else{
-            return false;
-        }
-
-
+        $logou = true;
+    }else{
+        return false;
     }
+
 
     return $logou;
 }
 
 function criaSessao($arrUsuario){
 
-    session_start();
+
     $_SESSION["usuario"] = $arrUsuario;
 
 }
 
-function destroiSessao($arrUsuario){
+function destroiSessao(){
 
     if(isset($_SESSION["usuario"])){
         unset($_SESSION["usuario"]);
@@ -53,7 +50,7 @@ function destroiSessao($arrUsuario){
 
 function minhaRotas(){
 
-    $arrayRotas =  array("index.php","contato.php", "empresa.php", "produto.php", "servico.php", "pesquisa.php");
+    $arrayRotas =  array("index.php","contato.php", "empresa.php", "produto.php", "servico.php", "pesquisa.php", "logoff.php");
 
     return $arrayRotas;
 }
