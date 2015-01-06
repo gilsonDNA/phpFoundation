@@ -6,7 +6,7 @@ return array(
     'host' => '127.0.0.1',
     'dbname' => 'phpbanco',
     'user' => 'root',
-    'password' => '1234',
+    'password' => 'dna123456',
 
   )
 );

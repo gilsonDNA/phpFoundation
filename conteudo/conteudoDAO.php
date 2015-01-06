@@ -23,6 +23,28 @@ function getListaConteudo($pagConteudo){
 
 }
 
+function getConteudo($pagConteudo){
+
+    try{
+        $conn = conexaoDB();
+
+    }catch (\Exception $e){
+        echo "Erro ao conectar conteúdo ".$e->getMessage();
+        die;
+    }
+
+    $sql = "Select * from tblconteudo where pagina = :pagina";
+    $smtp = $conn->prepare($sql);
+    $smtp->bindParam(":pagina", $pagConteudo);
+    $smtp->execute();
+
+    $conteudo = $smtp->fetch(PDO::FETCH_ASSOC);
+
+
+    return $conteudo;
+
+}
+
 function getListaPaginas($palavraPesquisada){
     try{
         $conn = conexaoDB();
@@ -46,5 +68,32 @@ function getListaPaginas($palavraPesquisada){
 
 
     return $listPaginas;
+
+}
+
+function updateConteudo($pagConteudo, $tipoConteudo){
+    try{
+        $conn = conexaoDB();
+
+    }catch (\Exception $e){
+        echo "Erro ao conectar updateConteudo ".$e->getMessage();
+        die;
+    }
+
+
+
+
+    $sql = "update tblconteudo set conteudo = :pagConteudo where pagina = :tipoconteudo ";
+    $smtp = $conn->prepare($sql);
+    $smtp->bindParam(":pagConteudo", $pagConteudo);
+    $smtp->bindParam(":tipoconteudo", $tipoConteudo);
+
+    if( $smtp->execute() ){
+        return true;
+    }else{
+        return false;
+    }
+
+
 
 }

@@ -6,7 +6,7 @@
 
         <?php if(!isset( $_POST['submit']) ): ?>
 
-        <h3>Você precisa fazer se autenticar no sistema:</3>
+        <h3>Você precisa se autenticar no sistema:</3>
 
 
 
@@ -44,6 +44,7 @@
 
                 if( password_verify($arrUsuario['password'], $usuario['password']) ){
                     criaSessao($usuario);
+                    echo "Autenticação realizada com sucesso!";
                 }else{
                     echo "Login ou senha inválidos!";
                     die;
@@ -51,12 +52,6 @@
             }catch (Exception $e){
                 echo $e->getMessage();
             }
-
-
-
-
-
-
 
 
 
