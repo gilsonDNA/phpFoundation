@@ -45,6 +45,7 @@
                 if( password_verify($arrUsuario['password'], $usuario['password']) ){
                     criaSessao($usuario);
                     echo "Autenticação realizada com sucesso!";
+                    echo "<hr /><a class='btn btn-default'  role='button' href='empresa'>OK</a>";
                 }else{
                     echo "Login ou senha inválidos!";
                     die;

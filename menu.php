@@ -12,7 +12,7 @@
         <li> <a href="contato"> <i class="icon-star"></i> Contato </a> </li>
 
         <?php  if( estaLogado() ): ?>
-           <li> <a href="logoff"> <i class="icon-star"></i>Sair do sistema </a> </li>
+            <li> <a href="logoff"> <i class="icon-star"></i>Sair do Sistema</a> </li>
         <?php  endif;  ?>
     </ul>
 

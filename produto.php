@@ -6,22 +6,23 @@
 <div class="span10">
 
 
+    <form class="form-horizontal"  role="form" method="post" >
+        <div class="well">
+            <h1> Página Produto </h1>
+            <hr />
 
-    <div class="well">
-        <h1> Página Produto </h1>
-        <hr />
+            <!-- inserindo conteudo na página -->
+            <?php
+                $conteudo = getConteudo($tipoConteudo);
 
-        <!-- inserindo conteudo na página -->
-        <?php
-            $listConteudo = getListaConteudo($tipoConteudo);
-
-            foreach($listConteudo as $conteudo){
-                //var_dump($conteudo);
                 echo "<p>".$conteudo['conteudo']."</p>" ;
-            }
-        ?>
 
-        <hr />
-        <button class="btn btn-primary btn-large">Clique aqui exemplo!</button>
-    </div>
+            ?>
+
+
+            <hr />
+            <a href="produtoEdit">Alterar Texto</a>
+        </div>
+
+    </form>
 </div>

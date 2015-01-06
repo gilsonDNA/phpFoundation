@@ -4,7 +4,7 @@
 
 
     <div class="well">
-        <h1> Logoff concluído. </h1>
+        <h1> Você fez logoff no Sistema. </h1>
         <hr />
 
         <!-- inserindo conteudo na página -->
@@ -13,7 +13,8 @@
             destroiSessao();
         ?>
 
-        <button class="btn btn-primary btn-large">Clique aqui exemplo!</button>
+
+        <a class='btn btn-default'  role='button' href='empresa'>Fazer login</a>
         <hr />
 
     </div>

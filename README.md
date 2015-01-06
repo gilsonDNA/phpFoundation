@@ -28,6 +28,14 @@ Para executar a Fixture execute o seguinte comando
 php db/fixture.php
 
 
+Após executar Fixture, será criado um login inicial:
+login: gilson@idnadevendas.com.br
+senha: 123456
+
+use esses dados para acessar o sistema.
+
+
+
 
 
 

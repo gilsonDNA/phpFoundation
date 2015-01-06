@@ -33,15 +33,15 @@ foreach($arrayPagConteudo as $pagConteudo ){
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                 id est laborum.";
 
-    for($x =0; $x <= 1; $x++ ){
-
-        $smtp = $conn->prepare("INSERT INTO tblconteudo (conteudo, pagina) VALUES (:conteudo, :pagina);");
-        $smtp->bindParam(":conteudo", $conteudo);
-        $smtp->bindParam(":pagina", $pagConteudo);
-        $smtp->execute();
 
 
-    }
+    $smtp = $conn->prepare("INSERT INTO tblconteudo (conteudo, pagina) VALUES (:conteudo, :pagina);");
+    $smtp->bindParam(":conteudo", $conteudo);
+    $smtp->bindParam(":pagina", $pagConteudo);
+    $smtp->execute();
+
+
+
 }
 
 echo "ok\n";
