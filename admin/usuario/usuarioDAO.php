@@ -1,5 +1,5 @@
 <?php
-include __DIR__."/../db/conexaoDB.php";
+include __DIR__ . "/../db/conexaoDB.php";
 
 function getUsuarioByEmail($email){
 

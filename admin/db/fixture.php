@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__."/../utilidades.php";
+include __DIR__."../../utilidades.php";
 require_once "conexaoDB.php";
 
 
@@ -66,13 +66,13 @@ echo "inserindo usuário\n";
 $nome = "Gilson";
 $sobrenome = "Anselmo de Araujo";
 $email = "gilson@idnadevendas.com.br";
-$password = "123456";
+$password = criptografa("123456");
 
 $smtp = $conn->prepare("INSERT INTO tblusuario (nome, sobrenome, email, password) VALUES (:nome, :sobrenome, :email, :password);");
 $smtp->bindParam(":nome", $nome);
 $smtp->bindParam(":sobrenome", $sobrenome);
 $smtp->bindParam(":email", $email);
-$smtp->bindParam(":password", criptografa($password) );
+$smtp->bindParam(":password", $password );
 $smtp->execute();
 
 

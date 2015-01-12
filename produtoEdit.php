@@ -1,5 +1,5 @@
 <?php
-   include  __DIR__."/conteudo/conteudoDAO.php";
+   include __DIR__ . "/admin/conteudo/conteudoDAO.php";
    $tipoConteudo = "produto";
 ?>
 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
