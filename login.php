@@ -31,7 +31,7 @@
         <?php else: ?>
            <?php
 
-            include("usuario/usuarioDAO.php");
+            include("admin/usuario/usuarioDAO.php");
             require_once("utilidades.php");
             $arrUsuario =  array();
             $arrUsuario['email'] = $_POST['email'];
