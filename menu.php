@@ -9,6 +9,7 @@
         <li class="active"> <a href="empresa"> <i class="icon-star"></i> Empresa </a> </li>
         <li> <a href="produto"> <i class="icon-star"></i> Produto </a> </li>
         <li> <a href="servico"> <i class="icon-star"></i> Serviços </a> </li>
+        <li> <a href="listClientes"> <i class="icon-star"></i> Clientes </a> </li>
         <li> <a href="contato"> <i class="icon-star"></i> Contato </a> </li>
 
         <?php  if( estaLogado() ): ?>

@@ -3,17 +3,16 @@
 <?php include_once("menu.php"); ?>
 
 <?php
-    //echo "index";
-    //die;
     $paginaDigitada = retornaURLDigitada();
     //var_dump($paginaDigitada);
     //die;
-    if($paginaDigitada != "error404") {
-
-
-        if(estaLogado()){
+    if($paginaDigitada != "error404")
+    {
+        if(estaLogado())
+        {
             require_once($paginaDigitada);
-        }else{
+        }else
+        {
             require_once("login.php");
         }
 

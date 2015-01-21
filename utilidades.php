@@ -50,7 +50,8 @@ function destroiSessao(){
 
 function minhaRotas(){
 
-    $arrayRotas =  array("index.php","contato.php", "empresa.php", "empresaEdit.php", "produto.php" , "produtoEdit.php", "servico.php" , "servicoEdit.php", "pesquisa.php", "logoff.php");
+    $arrayRotas =  array("index.php","contato.php", "empresa.php", "empresaEdit.php", "produto.php" ,
+          "produtoEdit.php", "servico.php" , "servicoEdit.php", "pesquisa.php","listClientes.php", "logoff.php");
 
     return $arrayRotas;
 }
@@ -87,6 +88,7 @@ function capturaURL(){
 
 
 function retornaURLDigitada(){
+
 
     $pagDigitada = capturaURL().".php";
 
